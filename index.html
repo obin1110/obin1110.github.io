@@ -26,22 +26,22 @@
         </div>
 
         <div class="button">
-            <input type="checkbox" class="answer" id="btn2">
+            <input type="checkbox" class="answer" id="btn2" name="answer">
             <label id="btn1_text" for="btn2">answer</label>
         </div>
 
         <div class="button">
-            <input type="checkbox" class="answer" id="btn3">
+            <input type="checkbox" class="answer" id="btn3" name="answer">
             <label id="btn1_text" for="btn3">answer</label>
         </div>
 
         <div class="button">
-            <input type="checkbox" class="answer" id="btn4">
+            <input type="checkbox" class="answer" id="btn4" name="answer">
             <label id="btn1_text" for="btn4">answer</label>
         </div>
 
         <div class="button">
-            <input type="checkbox" class="answer" id="btn5">
+            <input type="checkbox" class="answer" id="btn5" name="answer">
             <label id="btn1_text" for="btn5">answer</label>
         </div>
         <div class="submit"></div>
@@ -58,7 +58,7 @@
 <script>
     let quizData = [
         {
-            question: "문제1)페이커의 롤드컵 우승 횟수는?",
+            question: "문제1) 페이커의 롤드컵 우승 횟수는?",
             btn1: "1회",
             btn2: "2회",
             btn3: "3회",
@@ -103,6 +103,23 @@ function deSelectAnswer(){
         element.checked = false
     });
 }
+button.addEventListener('click', () => {
+    if(getSelected() === quizData[cur].correct){
+        score++;
+    }
+    cur++;
+
+    if (cur >= quizData.length ){
+        quiz.innerHTML = `<h2>총 ${quizData.length}문제 중 ${score} 문제를 맞추셨습니다.
+        </h2> <button onclick="location.reload()">Reload</button>`
+    }else{
+        loadQuiz();
+        deSelectAnswer();
+    }
+})
+
+
+loadQuiz();
 
 
 </script>
