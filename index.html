@@ -27,22 +27,22 @@
 
         <div class="button">
             <input type="checkbox" class="answer" id="btn2" name="answer">
-            <label id="btn1_text" for="btn2">answer</label>
+            <label id="btn2_text" for="btn2">answer</label>
         </div>
 
         <div class="button">
             <input type="checkbox" class="answer" id="btn3" name="answer">
-            <label id="btn1_text" for="btn3">answer</label>
+            <label id="btn3_text" for="btn3">answer</label>
         </div>
 
         <div class="button">
             <input type="checkbox" class="answer" id="btn4" name="answer">
-            <label id="btn1_text" for="btn4">answer</label>
+            <label id="btn4_text" for="btn4">answer</label>
         </div>
 
         <div class="button">
             <input type="checkbox" class="answer" id="btn5" name="answer">
-            <label id="btn1_text" for="btn5">answer</label>
+            <label id="btn5_text" for="btn5">answer</label>
         </div>
         <div class="submit"></div>
         <button id="submit">제출하기</button>
@@ -66,7 +66,36 @@
             btn5: "5회",
             correct: "btn3"
         },
+        {
+            question: "문제1) 페이커의 솔로랭크 아이디는?",
+            btn1: "hide in bush",
+            btn2: "hidden singer",
+            btn3: "hi i'm faker",
+            btn4: "skt t1 faker",
+            btn5: "hide on bush",
+            correct: "btn5"
+
+        },
+        {
+            question: "문제1) 페이커의 데뷔 년도는?",
+            btn1: "2012년",
+            btn2: "2013년",
+            btn3: "2014년",
+            btn4: "2015년",
+            btn5: "2070년",
+            correct: "btn2"
+        },
+        {
+            question: "문제1) 페이커의 본명은?",
+            btn1: "김상혁",
+            btn2: "임상혁",
+            btn3: "나상혁",
+            btn4: "페이커",
+            btn5: "이상혁",
+            correct: "btn5"
+        },
     ]
+    
     const questionEl = document.getElementById("question")
     const btn1_textEl = document.getElementById("btn1_text");
     const btn2_textEl = document.getElementById("btn2_text");
@@ -110,8 +139,9 @@ button.addEventListener('click', () => {
     cur++;
 
     if (cur >= quizData.length ){
-        quiz.innerHTML = `<h2>총 ${quizData.length}문제 중 ${score} 문제를 맞추셨습니다.
-        </h2> <button onclick="location.reload()">Reload</button>`
+        quiz.innerHTML = `<h2> 총 ${quizData.length}문제 중 ${score} 문제를 맞추셨습니다. </h2>
+
+         <button onclick="location.reload()">Reload</button>`
     }else{
         loadQuiz();
         deSelectAnswer();
@@ -121,8 +151,8 @@ button.addEventListener('click', () => {
 
 loadQuiz();
 
-
 </script>
+
 <style>
     .button {
         margin-top: 10px;
