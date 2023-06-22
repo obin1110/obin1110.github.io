@@ -8,80 +8,77 @@
 </head>
 
 <body>
-    <div style="text-align: center;"><img src="faker.jpg" alt="페이커">
-        <h2> 문제1) 페이커의 월드챔피언쉽 우승횟수는?</h2>
-        <br>
-        <main id="problem">
-            <div class="button">
-                <input type="checkbox" id="btn1">1번<br>
-            </div>
-
-            <div class="button">
-                <input type="checkbox" id="btn2">2번<br>
-            </div>
-
-            <div class="button">
-                <input type="checkbox" id="btn3">3번<br>
-            </div>
-
-            <div class="button">
-                <input type="checkbox" id="btn4">4번<br>
-            </div>
-
-            <div class="button">
-                <input type="checkbox" id="btn5">5번<br>
-            </div>
-        </main>
+    <div id="faker">
+        <img src="faker.jpg" alt="페이커">
 
     </div>
+    <br>
+
+    <div class="container">
+
+        <h2 id="question">Question</h2>
+
+        
+
+        <div class="button">
+            <input type="checkbox" id="btn1" name="answer"><br>
+            <label id="btn1_text" for="btn1">answer</label>
+        </div>
+
+        <div class="button">
+            <input type="checkbox" id="btn2"><br>
+            <label id="btn1_text" for="btn2">answer</label>
+        </div>
+
+        <div class="button">
+            <input type="checkbox" id="btn3"><br>
+            <label id="btn1_text" for="btn3">answer</label>
+        </div>
+
+        <div class="button">
+            <input type="checkbox" id="btn4"><br>
+            <label id="btn1_text" for="btn4">answer</label>
+        </div>
+
+        <div class="button">
+            <input type="checkbox" id="btn5"><br>
+            <label id="btn1_text" for="btn5">answer</label>
+        </div>
+    </div>
+
+
 
 </body>
 
 </html>
 
 <script>
-    let button1 = document.getElementById('btn1');
-    button1.addEventListener("click", () => {
-        alert('틀렸습니다.당신은 롤대회를 안보시는군요.');
-    })
-
-    let button2 = document.getElementById('btn2');
-    button2.addEventListener("click", () => {
-        alert('틀렸습니다.당신은 롤대회를 안보시는군요.');
-    })
-
-    let button3 = document.getElementById('btn3');
-    button3.addEventListener("click", () => {
-        alert('정답입니다. 당신은 롤잘알!');
-    })
-
-    let button4 = document.getElementById('btn4');
-    button4.addEventListener("click", () => {
-        alert('틀렸습니다.당신은 롤대회를 안보시는군요.');
-    })
-
-    let button5 = document.getElementById('btn5');
-    button5.addEventListener("click", () => {
-        alert('틀렸습니다.당신은 롤대회를 안보시는군요.');
-    })
-
+ 
 
 </script>
 <style>
-    h2 {
-        border: 3px solid red;
-        margin : 5px;
-        padding : 10px;
+    .button {
+        margin: 10px;
+    }
+
+    body {
+        margin : 0 auto;
+    }
+    .container{
+        margin : 0 auto;
+        border: solid black;
+        width : 500px;
+        height : 150x;
+        padding : 20px;
+    }
+    .question{
+        text-align: center;
+        margin-top: 10px;
+    }
+    #faker{ 
+        text-align: center;
        
     }
 
-    .button {
-        margin-bottom: 5px;
-
-    }
-    #problem{
-        border : solid black 2px;
-        padding : 10px;
-        
-    }
+    
 </style>
